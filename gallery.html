@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Our Organization</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">OrgName</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="events.html" class="nav-link">Events</a>
+                <a href="membership.html" class="nav-link">Membership</a>
+                <a href="gallery.html" class="nav-link active">Gallery</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <div class="nav-auth-mobile">
+                    <a href="login.html" class="btn btn-secondary">Sign In</a>
+                </div>
+            </div>
+            <div class="nav-controls">
+                <div class="nav-auth-desktop">
+                    <a href="login.html" class="btn btn-secondary">Sign In</a>
+            </div>
+            <button class="theme-toggle" id="theme-toggle">
+                <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Our Gallery</h1>
+            <p class="hero-subtitle">Explore our collection of photos and videos showcasing our community events, cultural celebrations, and memorable moments.</p>
+            <div class="hero-buttons">
+                <a href="#photos" class="btn btn-primary">View Photos</a>
+                <a href="#videos" class="btn btn-secondary">Watch Videos</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-placeholder">
+                <svg width="400" height="300" viewBox="0 0 400 300" fill="none">
+                    <rect width="400" height="300" fill="var(--accent-color)" opacity="0.1"/>
+                    <rect x="50" y="50" width="120" height="80" fill="var(--primary-color)" opacity="0.3"/>
+                    <rect x="180" y="70" width="120" height="80" fill="var(--secondary-color)" opacity="0.3"/>
+                    <rect x="110" y="150" width="120" height="80" fill="var(--accent-color)" opacity="0.3"/>
+                    <circle cx="200" cy="250" r="20" fill="var(--primary-color)" opacity="0.5"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-controls">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="photo">Photos</button>
+                    <button class="filter-btn" data-filter="video">Videos</button>
+                </div>
+                <div class="search-container">
+                    <input type="search" id="gallery-search" placeholder="Search by keyword...">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+                </div>
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                    </button>
+                    <button class="view-btn" data-view="list">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="8" y1="6" x2="21" y2="6"></line>
+                            <line x1="8" y1="12" x2="21" y2="12"></line>
+                            <line x1="8" y1="18" x2="21" y2="18"></line>
+                            <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                            <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                            <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Item 1: Photo -->
+                <div class="gallery-item" data-category="photo">
+                    <div class="gallery-item-inner">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=300&fit=crop" alt="Community Event Celebration" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Community Celebration</h3>
+                                <p>Annual cultural festival 2024</p>
+                            </div>
+                            <button class="gallery-expand" data-type="photo" data-src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 9.5 21 3m0 0h-6m6 0v6M3 21l6.5-6.5M3 21v-6m0 6h6"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: Video -->
+                <div class="gallery-item" data-category="video">
+                    <div class="gallery-item-inner">
+                        <video poster="https://images.unsplash.com/photo-1515923237332-956a24989667?w=400&h=300&fit=crop" muted loop playsinline>
+                            <source src="https://assets.mixkit.co/videos/preview/mixkit-people-at-a-performance-4001-large.mp4" type="video/mp4">
+                        </video>
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Live Performance</h3>
+                                <p>Concert from the main stage</p>
+                            </div>
+                            <button class="gallery-expand" data-type="video" data-src="https://assets.mixkit.co/videos/preview/mixkit-people-at-a-performance-4001-large.mp4">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 12 7-5v10l-7-5Z"/><path d="M2 17a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Photo -->
+                <div class="gallery-item" data-category="photo">
+                    <div class="gallery-item-inner">
+                        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=400&h=300&fit=crop" alt="Team Building Workshop" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Team Building</h3>
+                                <p>Monthly community workshop</p>
+                            </div>
+                            <button class="gallery-expand" data-type="photo" data-src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&h=600&fit=crop">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 9.5 21 3m0 0h-6m6 0v6M3 21l6.5-6.5M3 21v-6m0 6h6"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4: Video -->
+                <div class="gallery-item" data-category="video">
+                    <div class="gallery-item-inner">
+                        <video poster="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=300&fit=crop" muted loop playsinline>
+                            <source src="https://assets.mixkit.co/videos/preview/mixkit-a-woman-in-a-business-meeting-42211-large.mp4" type="video/mp4">
+                        </video>
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Creative Workshop</h3>
+                                <p>Brainstorming session in progress</p>
+                            </div>
+                            <button class="gallery-expand" data-type="video" data-src="https://assets.mixkit.co/videos/preview/mixkit-a-woman-in-a-business-meeting-42211-large.mp4">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 12 7-5v10l-7-5Z"/><path d="M2 17a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More items can be added here -->
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="lightbox-media">
+                <img id="lightbox-image" src="" alt="">
+                <div id="lightbox-video-container"></div>
+            </div>
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="video-modal">
+        <div class="video-modal-content">
+            <button class="video-modal-close" id="video-modal-close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="video-container">
+                <iframe id="video-iframe" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Our Organization</h3>
+                    <p>Building communities and fostering connections since 2020.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="legal.html">Privacy Policy</a></li>
+                        <li><a href="legal.html">Terms of Service</a></li>
+                        <li><a href="legal.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Our Organization. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html> 
