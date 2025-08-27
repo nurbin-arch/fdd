@@ -383,7 +383,7 @@ function setupQuickActions() {
             
             switch (action) {
                 case 'join':
-                    window.location.href = 'membership.html';
+                    window.location.href = 'contact.html';
                     break;
                 case 'events':
                     window.location.href = 'events.html';
