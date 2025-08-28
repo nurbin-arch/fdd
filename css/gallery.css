@@ -267,6 +267,16 @@
 }
 
 /* Video Gallery Grid */
+.gallery-item[data-category="video"] {
+    grid-column: span 2; /* make it wider than photos */
+}
+
+.tiktok-embed {
+    width: 100% !important;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 .video-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
