@@ -151,6 +151,26 @@
     margin-top: var(--spacing-2xl);
 }
 
+/* Horizontal row for TikTok videos */
+.video-row {
+    display: flex;
+    gap: var(--spacing-lg);
+    justify-content: center;
+    align-items: center; /* center align both embeds */
+    grid-column: 1 / -1; /* span full grid width */
+    justify-self: center; /* center the whole row within grid */
+    width: 100%;
+}
+
+.video-row .gallery-item { flex: 0 0 auto; }
+
+.video-row .gallery-item .gallery-item-inner {
+    aspect-ratio: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* center the player inside the frame */
+}
+
 .gallery-item {
     opacity: 1;
     transform: scale(1);
@@ -275,6 +295,28 @@
     width: 100% !important;
     border-radius: 10px;
     overflow: hidden;
+}
+
+/* Fix TikTok embed sizing/gaps inside grid cards */
+.gallery-item[data-category="video"] .gallery-item-inner {
+    aspect-ratio: auto; /* follow video frame */
+    display: block;
+}
+
+.gallery-item[data-category="video"] .tiktok-embed {
+    margin: 0 auto !important; /* center horizontally */
+    width: 325px !important; /* match TikTok player width for clarity */
+    height: auto !important;
+}
+
+@media (min-width: 1024px) {
+    .video-row .gallery-item .tiktok-embed { width: 360px !important; }
+}
+
+/* When list view, let videos stretch horizontally */
+.gallery-grid.list-view .gallery-item[data-category="video"] .gallery-item-inner {
+    aspect-ratio: auto;
+    height: 380px;
 }
 
 .video-grid {
